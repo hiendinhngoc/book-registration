@@ -13,6 +13,7 @@ AllCops:
     - 'node_modules/**/*'
     - 'bin/**/*'
     - 'db/schema.rb'
+    - 'lib/tasks/auto_annotate_models.rake'
 
 Style/FrozenStringLiteralComment:
   Enabled: false
