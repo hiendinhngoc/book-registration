@@ -16,40 +16,6 @@ If you run the project locally, the followings are required.
 - Yarn 1.22.x
 - MySQL 8.0.x
 
-## Initialization
-After exporting project from iCode, initialize the project. First, create your development environment.
-```bash
-# docker env
-docker-compose build
-
-# local env
-bundle install && yarn install
-```
-
-Run ` EDITOR="vi" bundle exec rails credentials:edit ` and enter the following test tokens.
-```
-secret_key_base: "Please fill the generated key"
-aws:
-  access_key_id: "Please fill access key after you get an AWS account"
-  secret_access_key: "Please fill secret key after you get an AWS account"
-stripe:
-  secret_key: "sk_test_pfkiZJB75Yfc2SJLXb9QXxtO"
-  public_key: "pk_test_I3luumw3YWcV9oHxLFeM3eU1"
-```
-
-Run `cp env.example .env` and open `.env` file to edit environment variables.
-
-Finally run the setup command.
-```
-# docker env
-docker-compose run web ruby ./bin/initialize
-
-# local env
-ruby ./bin/initialize
-```
-
-It's all steps to initialize the project. When you finish initialization, please remove this ` ## Initialization ` section from the readme.
-
 ## Setup
 Setup procedure of development environment.
 
