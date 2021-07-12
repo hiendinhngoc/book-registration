@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: book_registrations
+# Table name: user_books
 #
 #  id         :bigint           not null, primary key
 #  created_at :datetime         not null
@@ -10,8 +10,8 @@
 #
 # Indexes
 #
-#  index_book_registrations_on_book_id  (book_id)
-#  index_book_registrations_on_user_id  (user_id)
+#  index_user_books_on_book_id  (book_id)
+#  index_user_books_on_user_id  (user_id)
 #
 # Foreign Keys
 #
@@ -20,6 +20,6 @@
 #
 require 'rails_helper'
 
-RSpec.describe BookRegistration, type: :model do
+RSpec.describe UserBook, type: :model do
   pending "add some examples to (or delete) #{__FILE__}"
 end

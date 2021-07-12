@@ -10,5 +10,5 @@
 #  updated_at  :datetime         not null
 #
 class Book < ApplicationRecord
-  has_many :book_registrations, dependent: :destroy
+  has_many :user_books, dependent: :destroy
 end

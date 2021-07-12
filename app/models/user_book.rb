@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: book_registrations
+# Table name: user_books
 #
 #  id         :bigint           not null, primary key
 #  created_at :datetime         not null
@@ -10,17 +10,15 @@
 #
 # Indexes
 #
-#  index_book_registrations_on_book_id  (book_id)
-#  index_book_registrations_on_user_id  (user_id)
+#  index_user_books_on_book_id  (book_id)
+#  index_user_books_on_user_id  (user_id)
 #
 # Foreign Keys
 #
 #  fk_rails_...  (book_id => books.id)
 #  fk_rails_...  (user_id => users.id)
 #
-FactoryBot.define do
-  factory :book_registration do
-    user { nil }
-    book { nil }
-  end
+class UserBook < ApplicationRecord
+  belongs_to :user
+  belongs_to :book
 end
