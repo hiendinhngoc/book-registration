@@ -13,6 +13,8 @@ AllCops:
     - 'node_modules/**/*'
     - 'bin/**/*'
     - 'db/schema.rb'
+    - 'lib/tasks/auto_annotate_models.rake'
+    - 'vendor/bundle/**/*'
 
 Style/FrozenStringLiteralComment:
   Enabled: false

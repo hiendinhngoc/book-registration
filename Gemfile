@@ -47,6 +47,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'annotate'
   gem 'capistrano'
   gem 'capistrano3-nginx', '~> 2.0'
   gem 'capistrano3-unicorn'
