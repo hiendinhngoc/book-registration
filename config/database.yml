@@ -8,14 +8,14 @@ development:
   <<: *default
   database: assignment_development
   username: root
-  password: 
+  password:
   socket: /var/run/mysqld/mysqld.sock
 
 test:
   <<: *default
   database: assignment_test
   username: root
-  password: 
+  password:
   socket: /var/run/mysqld/mysqld.sock
 
 production:
