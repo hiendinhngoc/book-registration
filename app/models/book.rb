@@ -23,7 +23,7 @@ class Book < ApplicationRecord
 
   scope :search_books, lambda { |user_name, title, description|
     joins(:user_books)
-      .where('user_books.user_id like ? OR title like ? OR description like ?',
+      .where('user_books.user_id in (?) OR title like ? OR description like ?',
              User.where(name: user_name).select(:id),
              "%#{title}%",
              "%#{description}%")

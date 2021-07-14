@@ -11,8 +11,8 @@
 #
 FactoryBot.define do
   factory :book do
-    title { "MyString" }
-    description { "MyText" }
-    author { "MyString" }
+    title { "Harry Porter" }
+    description { "The best seller book" }
+    author { "J. K. Rowling" }
   end
 end

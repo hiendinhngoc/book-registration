@@ -20,7 +20,7 @@
 #
 FactoryBot.define do
   factory :user_book do
-    user { nil }
-    book { nil }
+    association :user
+    association :book
   end
 end

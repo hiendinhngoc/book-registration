@@ -1,0 +1,36 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/books":
+    get:
+      summary: books list
+      tags:
+      - Books
+      parameters:
+      - name: book[title]
+        in: query
+        schema:
+          type: string
+      - name: book[description]
+        in: query
+        schema:
+          type: string
+      - name: user[name]
+        in: query
+        schema:
+          type: string
+      - name: query
+        in: query
+        schema:
+          type: string
+      responses:
+        '200':
+          description: success
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: localhost:3000
